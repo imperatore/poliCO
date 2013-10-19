@@ -1,0 +1,86 @@
+//============================================================================
+// Name        : zz_prove_calcolatrice_04.cpp
+// Author      : dale
+// Version     : 5.0
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int ope;                 //variables
+    long long n1, n2, n3;
+
+
+
+	cout << "add the first number" << endl;                                              //ask to add the first number
+	cin >> n1;                                                                           //add the number
+
+	cout << "add the second number" << endl;                                             //ask to add the second number
+		cin >> n2;                                                                       //add the number
+
+	cout << "add the operator" << endl;                                                  //ask to choose the operation
+	cout << "1 to sum; 2 to multiplication; 3 to division, 4 to subtraction" << endl;     //choose the operation
+	cin >> ope;                                                                          //variables
+
+
+
+
+	if (ope == 1)                                                                        //if for the sum
+	{
+		n3 = n1 + n2;                                                                    //it does the sum
+		cout << n1 << "+" << n2 << "=" << n3 << endl;                                    //print the result
+	}
+	else
+	{
+		if (ope == 2 )                                                                   //if for multiplication
+		{
+			n3 = n1 * n2;                                                                //it does the multiplication
+			cout << n1 << "*" << n2 << "=" << n3 << endl;                                //print the multiplication
+		}
+		else
+		{
+			if (ope == 4)                                                                //if for subtraction
+			{
+				if (n1 >= n2)                                                            //if the n1 is > of n2
+				{
+					n3 = n1 -n2;                                                         //it does the subtraction
+					cout << n1 << "-" << n2 << "=" << n3 << endl;                        //print the subtraction
+
+				}
+				else                                                                     //else if n2 is < of n1
+				{
+					n3 = n1 - n2;                                                        //it does the subtraction
+					cout << n1 << "-" << n2 << "=" << n3 << endl;                        //print the subtraction
+				}
+			}
+			else
+			{
+				if (ope == 3)
+				{
+					if (n1 >= n2)                                                                                    //if the n1 < n2
+					{
+						n3 = n1 / n2;                                                                                //it does the division between n1 and n2
+						int resto;                                                                                   //add variables fuffa
+						resto = n1 % n2;                                                                             //do the rest
+						if (resto == 0)                                                                              //but the rest there is or there isn't??
+						{
+							cout << n1 << "/" << n2 << "=" << n3 << endl;                                            //print the quotient without the rest
+						}
+						else
+						{
+							cout << n1 << "/" << n2 << "=" << n3 << "   " << "+" << resto << "di resto!" << endl;    //print the quotient with rest
+						}
+					}
+				}
+			}
+		}
+	}
+    cout << "fine" << endl;
+    int cacca;                                                                                                       //variables fuffa
+    cin >> cacca;                                                                                                    //fine
+	return 0;
+}
